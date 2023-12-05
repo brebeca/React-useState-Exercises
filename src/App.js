@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import Counter from "./teme/tema2/ExercitiuCounter";
+import InputField from "./teme/tema3/InputField";
+import CharacterCounter from "./teme/tema4/CharacterCounter";
+import TodoList from "./teme/tema5/ToDoListRezolvare";
+import SearchFilter from "./teme/tema6/SearchFilter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Counter />
     </div>
   );
 }
-
 export default App;
