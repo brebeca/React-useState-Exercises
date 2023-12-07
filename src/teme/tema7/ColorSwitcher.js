@@ -1,10 +1,14 @@
 import React from "react";
+import switcherStyles from "./ColorSwitcher.module.css";
 
 function ColorSwitcher() {
   return (
-    <div>
-      <select>{/* Render the color options here */}</select>
-      <div>{/* Change the background color of this div */}</div>
+    <div className={switcherStyles.container}>
+      <select className={switcherStyles.switcher}>
+        {/* Render the color options here */}
+      </select>
+
+      <div></div>
     </div>
   );
 }

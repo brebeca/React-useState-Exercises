@@ -9,7 +9,7 @@ import ColorSwitcher from "./teme/tema7/ColorSwitcher";
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <ColorSwitcher />
     </div>
   );
