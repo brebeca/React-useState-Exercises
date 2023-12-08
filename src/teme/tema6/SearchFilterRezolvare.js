@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const items = [
   "In ce an a inceput primul razbui modial ?",
@@ -10,10 +10,27 @@ const items = [
 ];
 
 function SearchFilter() {
+  const [texts, setTexts] = useState([]);
+
   return (
     <div>
-      <input type="text" />
-      <ul>{/* Render the filtered list of items here */}</ul>
+      <input
+        type="text"
+        onChange={(e) => {
+          setTexts(
+            items.filter(
+              (item) => e.target.value && item.includes(e.target.value)
+            )
+          );
+        }}
+      />
+      <ul>
+        {texts.map((item) => (
+          <div key={item}>
+            <li>{item}</li>
+          </div>
+        ))}
+      </ul>
     </div>
   );
 }
